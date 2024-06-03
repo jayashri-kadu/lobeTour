@@ -1,0 +1,239 @@
+* {
+    font-family: lab-Grotesque;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: lab-Grotesque;
+}
+
+.container {
+    width: 1088px;
+    margin: auto;
+}
+
+@font-face {
+    font-family: lab-Grotesque;
+    src: url('../fonts/LabGrotesqueBlack.otf');
+}
+
+@font-face {
+    font-family: lab-Grotesque-light;
+    src: url('../fonts/LabGrotesqueLight.otf');
+}
+
+.btn {
+    width: 129px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #04DDB2;
+    color: #fff;
+    transition: ease-in 1s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: row;
+}
+.navbar-brand img{
+    width: 24px;
+}
+nav>ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav>ul>li {
+    list-style: none;
+
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: #767676;
+    font-size: 20px;
+    transition: all ease-in 0.3s;
+
+}
+
+nav>ul>li>a:hover {
+    font-size: 22px;
+    color: #333;
+    transition: all ease-in 0.3s;
+
+}
+
+nav>ul>li>a:active {
+    color: #333;
+}
+
+/* -------------Main--------------- */
+
+main {
+    /* width: 60%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 64px 0;
+    gap: 2rem;
+}
+
+main>h1 {
+    font-size: 64px;
+}
+
+main>p {
+    width: 54%;
+    font-size: 26px;
+    text-align: center;
+    font-family: lab-Grotesque-light;
+}
+
+/* ------------ section ------------- */
+
+section>img {
+    width: 100%;
+    border-radius: 50px;
+    transition: all ease-in 0.3s;
+
+}
+
+section>img:hover {
+    box-shadow: 0 100px 140px -50px rgba(0, 0, 0, .25), 0 0 20px 0 rgba(0, 0, 0, .03);
+    transform: scale3d(1.01, 1.01, 1.01);
+    /* transform: scale(1.2); */
+    transition: all ease-in 0.3s;
+}
+
+main>h1 {
+    width: 50%;
+    text-align: center;
+}
+
+main>.DownloadBtn {
+    width: 168px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.train-content {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+/* ----------------------Footer----------------------- */
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 2rem;
+}
+
+footer>ul>li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+footer>ul>li>a>h3 {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+footer>ul>li>a {
+    text-decoration: none;
+    color: #767676;
+    font-family: lab-Grotesque-light;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: row;
+    
+}
+
+    footer .social-icons .speech-icon {
+    background-color: #04DDB2;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+footer .social-icons .speech-icon a img {
+    width: 32px;
+}
+
+
+/* Media Query */
+
+@media (max-width:698px){
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    nav .navbar-brand{
+        font-size: 52px;
+    }
+    .navbar-brand img{
+        width: 34px;
+    }
+    /* Video Frame */
+    section>img{
+        padding: 2rem;
+    }
+    /* footer */
+    footer {
+        /* display: grid; */
+        grid-template-columns: auto auto;
+        /* padding: 2rem; */
+        text-align: center;    
+    }
+    footer > ul >li > a{
+        font-size: 23px;
+    }
+    footer .Footer-links2{
+        grid-column: 1/2;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    footer .Footer-links3{
+        grid-column: 2/2 ;
+        text-align: center;
+
+    }
+    footer .Footer-links4{
+        grid-column: 1/2 ;
+        text-align: center;
+
+    }
+    footer .social-icons{
+        grid-column: 2/3 ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .Footer-links1{
+        grid-row: 3/span 2;
+        grid-column: 1 / span 2;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    footer .Footer-links1 li a h3{
+        font-size: 42px;
+    }
+}
